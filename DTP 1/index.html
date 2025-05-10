@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basketball Bootcamp Flyer</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body class="min-h-screen flex items-center justify-center p-2 sm:p-4 overflow-x-hidden">
+  <div class="flyer-container relative w-[95%] max-w-md bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl border-4 border-orange-500 overflow-hidden flex flex-col items-center px-3 sm:px-4 py-4 sm:py-6">
+    <!-- Badge -->
+    <div class="w-full flex justify-center mb-3 sm:mb-4">
+      <span class="badge text-white font-extrabold px-4 sm:px-6 py-1.5 sm:py-2 rounded-full shadow-lg text-base sm:text-lg tracking-widest border-4 border-white">BASKETBALL FLYER</span>
+    </div>
+    
+    <!-- Top Section -->
+    <div class="flex flex-col items-center mb-4 sm:mb-5">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=300&h=300&q=80" 
+           alt="Player" 
+           class="player-image rounded-full border-4 border-white shadow-lg w-24 h-24 sm:w-28 sm:h-28 object-cover mb-3">
+      <h2 class="text-lg sm:text-xl font-extrabold text-gray-900 tracking-widest uppercase mb-1 text-center">Justine D. Palatan</h2>
+      <p class="text-orange-700 text-sm sm:text-base font-semibold mb-1 text-center">#7 | Point Guard & Coach</p>
+      <span class="inline-block bg-orange-100 text-orange-700 font-bold px-3 py-0.5 rounded-full text-xs mb-2">Trainer & Coach</span>
+    </div>
+
+    <!-- Event Section -->
+    <div class="w-full flex flex-col items-center mb-4 sm:mb-5">
+      <h1 class="event-title text-lg sm:text-xl font-extrabold mb-2 uppercase tracking-wide text-center px-1">Basketball Bootcamp Training</h1>
+      <p class="text-gray-700 text-xs sm:text-sm mb-3 font-semibold text-center max-w-xs px-1">
+        Master your skills with professional coaching! Includes shooting drills, defensive techniques, ball handling, and personalized training sessions.
+      </p>
+      <div class="bg-orange-50 rounded-lg p-2 sm:p-3 w-full max-w-xs mb-3">
+        <div class="grid grid-cols-2 gap-1 sm:gap-2">
+          <p class="text-gray-700 font-semibold text-xs sm:text-sm">Date:</p>
+          <p class="text-gray-700 text-xs sm:text-sm">June 10, 2024</p>
+          <p class="text-gray-700 font-semibold text-xs sm:text-sm">Venue:</p>
+          <p class="text-gray-700 text-xs sm:text-sm">Metro Sports Arena</p>
+          <p class="text-gray-700 font-semibold text-xs sm:text-sm">Doors Open:</p>
+          <p class="text-gray-700 text-xs sm:text-sm">4:00 PM</p>
+          <p class="text-gray-700 font-semibold text-xs sm:text-sm">Tip-off:</p>
+          <p class="text-gray-700 text-xs sm:text-sm">6:00 PM</p>
+        </div>
+      </div>
+      <a href="#" class="ticket-button text-white font-bold px-4 sm:px-6 py-2 sm:py-2.5 rounded-full shadow transition text-sm sm:text-base mb-3 w-full sm:w-auto text-center">Buy Tickets</a>
+      <!-- QR Code -->
+      <div id="qrcode" class="qr-container flex items-center justify-center rounded-lg border-2 border-orange-300 w-16 h-16 sm:w-20 sm:h-20 mb-3"></div>
+    </div>
+
+    <!-- Partners Section -->
+    <div class="w-full flex flex-col items-center mb-3">
+      <h3 class="font-bold text-gray-800 mb-2 uppercase tracking-wide text-center text-sm sm:text-base">Event Partners</h3>
+      <div class="flex flex-wrap justify-center items-center bg-white py-2 rounded-lg shadow-inner gap-3 sm:gap-4 border border-gray-200 w-full mb-2">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1200px-Logo_NIKE.svg.png" alt="Nike" class="partner-logo h-5 sm:h-6 w-auto object-contain bg-white p-1">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/03/National_Basketball_Association_logo.svg/1200px-National_Basketball_Association_logo.svg.png" alt="NBA" class="partner-logo h-5 sm:h-6 w-auto object-contain bg-white p-1">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Adidas_Logo.svg/1200px-Adidas_Logo.svg.png" alt="Adidas" class="partner-logo h-5 sm:h-6 w-auto object-contain bg-white p-1">
+      </div>
+      <p class="text-gray-500 text-xs text-center px-1">
+        Visit <a href="https://downtownbasketball.com" class="underline text-orange-600 hover:text-orange-700">downtownbasketball.com</a> or call <span class="font-semibold">555-CHAMP</span>
+      </p>
+    </div>
+
+    <!-- Export Button -->
+    <div class="w-full flex justify-center mt-3">
+      <button id="exportButton" class="export-button text-white font-bold px-4 sm:px-5 py-1.5 sm:py-2 rounded-full shadow transition text-xs sm:text-sm w-full sm:w-auto">Export Flyer</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script src="animations.js"></script>
+</body>
+</html>
